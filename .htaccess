@@ -1,0 +1,8 @@
+RewriteEngine On
+# if www then redirect to non-www
+RewriteCond %{HTTP_HOST} ^(?:www\.)?(.+)$
+RewriteRule ^(.*)$  https://%1/$1
+
+# if not https then redirect to https
+
+# if 404 then redirect to https homepage
